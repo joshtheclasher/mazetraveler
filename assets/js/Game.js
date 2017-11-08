@@ -88,5 +88,11 @@ MazeTraveler.Game.prototype = {
     this.game.physics.arcade.collide(this.player, this.wallsLayer);
     this.game.physics.arcade.overlap(this.player, this.items, this.collect, null, this);
     //this.game.physics.arcade.overlap(this.player, this.doors, this.enterDoor, null, this);
+  },
+  collect: function(player, collectable) {
+    console.log('yummy!');
+
+    //remove sprite
+    collectable.destroy();
   }
 }
